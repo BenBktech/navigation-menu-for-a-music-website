@@ -170,15 +170,16 @@ nav {
     transform: translate(-50%, -50%);
     z-index: 70;
     opacity: 0;
-    font-size: 3rem;
-    width: 5rem;
-    height: 5rem;
+    font-size: 1.5rem;
+    width: 7rem;
+    height: 7rem;
     background: #f94658;;
     color: #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--secondary-font);
 }
 
 /* Hero */
