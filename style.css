@@ -1,0 +1,191 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #112121;
+    --secondary-color: #f94658;
+    --third-color: #fff;
+
+    --primary-font: 'Inria Serif', serif;
+    --secondary-font: 'Arapey', serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Toggle */
+.toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.open {
+    display: block;
+}
+
+.close {
+    display: none;
+}
+
+.menu__open .open {
+    display: none;
+}
+
+.menu__open .close {
+    display: block;
+}
+
+/* Menu */
+header {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--primary-font);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+}
+
+/* Position of Left and Right Menu */
+.menu > .menu__left, .menu > .menu__right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #112121;
+}
+
+.menu > .menu__left {
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform .25s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 17%;
+}
+
+.menu > .menu__right {
+    right: 0;
+    transform: translateX(100%);
+    transition: transform .25s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 17%;
+}
+
+.menu__open .menu > .menu__left {
+    transform: translateX(0);
+}
+
+.menu__open .menu > .menu__right {
+    transform: translateX(0);
+}
+
+/* Left Menu Links */
+.menu > .menu__left a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .5s;
+}
+
+.menu > .menu__left a:hover {
+    color: #f94658;
+}
+
+.menu .menu__left__link {
+    font-size: 3rem;
+}
+
+.menu .menu__left__link__number {
+    font-size: .8rem;
+    font-family: var(--secondary-font);
+}
+
+/* Right Menu Links */
+.menu .menu__right .menu__right__item__title {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.menu .menu__right .menu__right__item__link {
+    margin-top: 0.15rem;
+}
+
+.menu .menu__right .menu__right__item__link a {
+    color: #797979;
+    transition: color .5s;
+}
+
+.menu .menu__right .menu__right__item__link a:hover {
+    color: #f94658;;
+}
+
+/* Menu Separation */
+.menu__sep {
+    position: absolute;
+    background: #f94658;;
+    z-index: 50;
+    width: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .2s;
+}
+
+.menu__sep__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 70;
+    opacity: 0;
+    font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
+    background: #f94658;;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url('img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
